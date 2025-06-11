@@ -1,0 +1,1 @@
+ALTER TABLE "warns" ALTER COLUMN "userid" SET DATA TYPE bigint;

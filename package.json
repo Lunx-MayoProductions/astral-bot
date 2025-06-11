@@ -1,0 +1,38 @@
+{
+  "name": "astral",
+  "version": "1.0.0",
+  "description": "Astral. A discord Bot that can do what you want not the author.",
+  "license": "ISC",
+  "author": "Lunx",
+  "type": "commonjs",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web-build": "npx tsc",
+    "web-run": "node dist/backend/server.js",
+    "web-dev": "npx tsc --watch && node dist/backend/server.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.2",
+    "eslint": "^9.28.0",
+    "express": "^5.1.0",
+    "naughty-words": "^1.2.0",
+    "openai": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.30",
+    "@typescript-eslint/parser": "^8.33.1",
+    "drizzle-kit": "^0.31.1",
+    "nodemon": "^3.1.10",
+    "postgres": "^3.4.7",
+    "prettier": "3.5.3",
+    "prettier-eslint": "^16.4.2",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^7.1.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

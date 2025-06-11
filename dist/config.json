@@ -1,0 +1,21 @@
+{
+    "token": "MTM4MDg0Njk5NTk3NTE3NjI5Mw.GhkmOQ.CtmgTwlwM8XvKD5l-_T_W-Zr9PivIKl-cvxQq0",
+    "clientId": 1380846995975176293,
+    "guildId": 1354493915637612554,
+    "badwords": [
+        "bitch",
+        "gay",
+        "http://",
+        "https://",
+        "http:",
+        "https:",
+        ".de",
+        ".com",
+        ".it",
+        ".fun",
+        ".d e",
+        ". de",
+        ". d e"
+    ],
+    "db_url": "postgresql://postgres.txeqlfsucaufztmbkghp:[YOUR-PASSWORD]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"
+}
