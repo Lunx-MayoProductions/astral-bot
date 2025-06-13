@@ -1,5 +1,5 @@
 {
-    "token":"MTM4MDg0Njk5NTk3NTE3NjI5Mw.GhkmOQ.CtmgTwlwM8XvKD5l-_T_W-Zr9PivIKl-cvxQq0",
+    "token":"MTM4MDg0Njk5NTk3NTE3NjI5Mw.GBhfsQ.KtPck_gmzY4wU7Pmy2VkN1RnLd2f8mwcVd27zo",
     "clientId":1380846995975176293,
     "guildId":1354493915637612554,
     "badwords": [
@@ -422,5 +422,5 @@
 
     "maxwarns":3,
 
-    "openai":"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"
+    "openai":"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"
 }
