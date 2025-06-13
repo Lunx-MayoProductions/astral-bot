@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
     "token":"MTM4MDg0Njk5NTk3NTE3NjI5Mw.GBhfsQ.KtPck_gmzY4wU7Pmy2VkN1RnLd2f8mwcVd27zo",
     "clientId":1380846995975176293,
     "guildId":1354493915637612554,
+=======
+    "token":"",
+    "clientId":,
+    "guildId":,
+>>>>>>> 40322badae837034c39e22b75c84d82dfae1f059
     "badwords": [
         "http://",
         "https://",
