@@ -23,14 +23,20 @@ export async function execute(interaction: CommandInteraction) {
 
     const prompt = (interaction as ChatInputCommandInteraction).options.getString('prompt');
 
+        const embed = new EmbedBuilder()
+      .setTitle('Processing')
+      .addFields({ name: 'Prompt', value: prompt as string })
+      .setColor('Green')
+      .setTimestamp();
 
 
-    interaction.reply(".....");
+
+    interaction.reply({embeds: [embed]});
 
         const response = await openaimodel.chat.completions.create({
-      model: 'deepseek/deepseek-r1-0528-qwen3-8b:free', // Free/cheap model
+      model: 'gpt-5', // Free/cheap model
       messages: [
-        { role: "system", content: "You are a helpful Discord bot named Astral." },
+        { role: "system", content: "You are a helpful Discord bot" },
         { role: "user", content: prompt as string }
       ]
     })

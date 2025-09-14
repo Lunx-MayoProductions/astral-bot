@@ -1,0 +1,8 @@
+{
+    "openai": "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",
+    "token": "MTQxMzg2Mjc3Mjk3ODIyMTE1Nw.GsaSGT.zJ_H0gSCiYKLy0YAZfWszj5i1HMBP4EU3rfBsA",
+        "badwords": [],
+    "db_url": "postgresql://postgres.txeqlfsucaufztmbkghp:[YOUR-PASSWORD]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres",
+    "clientID": "1413862772978221157",
+    "guildID": "1416413379865870488"
+}

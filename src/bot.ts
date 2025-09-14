@@ -1,5 +1,5 @@
 import { Client, GatewayIntentBits, REST, Routes, RESTPostAPIApplicationCommandsJSONBody, TextChannel, ChannelType, EmbedBuilder, ActivityType } from 'discord.js';
-import { token, badwords, openai } from '../config.json';
+import { token, badwords, openai, clientID, guildID } from '../config.json';
 import fs from 'fs';
 import path from 'path';
 import {
@@ -19,14 +19,13 @@ import OpenAI, { OpenAIError } from 'openai';
 
 import app from './backend/server';
 
-import "./util/database";
 import { randomUUID } from 'crypto';
 import { apiUrl } from './backend/server';
 
 const commands: RESTPostAPIApplicationCommandsJSONBody[] = [];
 
-const clientId = "1380846995975176293";
-const guildId = "1354493915637612554";
+const clientId = clientID;
+const guildId = guildID;
 
 
 
@@ -121,7 +120,7 @@ client.on('interactionCreate', async (interaction) => {
       }
       const channel = await interaction.guild?.channels.create({
         name: `ticket-${interaction.user.id}`,
-        type: 0, // GuildText
+        type: 0,
         topic: `Ticket for ${interaction.user.tag} (${interaction.user.id})`,
         permissionOverwrites: [
           {
@@ -146,8 +145,15 @@ client.on('interactionCreate', async (interaction) => {
 
       const row = new ActionRowBuilder<ButtonBuilder>().addComponents(closeButton);
 
+      const embed = new EmbedBuilder()
+      .setTitle("Someone will be with you shortly.")
+      .setDescription("Hello $, a staff member will be with you shortly.".replace("$", interaction.user.displayName))
+      .setColor('Green')
+      .setAuthor({name: "Lumio"})
+      .setTimestamp();
+
       await channel?.send({
-        content: `Hello ${interaction.user}, a staff member will be with you shortly.`,
+        embeds: [embed],
         components: [row],
       });
 
@@ -343,7 +349,7 @@ client.on('messageCreate', async (message) => {
 
 
 
-/*client.on('guildMemberAdd', async (member) => {
+client.on('guildMemberAdd', async (member) => {
   const user = member.id;
   const db = require('./util/database').getDb();
   const { verified } = require('./util/database').tables;
@@ -371,7 +377,6 @@ client.on('messageCreate', async (message) => {
         .then(() => console.log(`Kicked unverified user: ${user}`))
   }
 });
-*/
 
 
 
