@@ -349,7 +349,8 @@ client.on('messageCreate', async (message) => {
 
 
 
-client.on('guildMemberAdd', async (member) => {
+/**
+ * client.on('guildMemberAdd', async (member) => {
   const user = member.id;
   const db = require('./util/database').getDb();
   const { verified } = require('./util/database').tables;
@@ -377,6 +378,7 @@ client.on('guildMemberAdd', async (member) => {
         .then(() => console.log(`Kicked unverified user: ${user}`))
   }
 });
+ */
 
 
 
